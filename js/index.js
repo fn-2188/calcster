@@ -137,7 +137,7 @@ function updateHistory() {
         defaultOutputArrowCell.innerHTML = "&rarr;";
     }
 }
-function togglePreview(msg = '<br>') {
+function togglePreview() {
     math_preview.innerHTML = msg;
 }
 
@@ -155,7 +155,7 @@ math_input.addEventListener("keyup", function (event) {
         if (!res.err) {
             math_input.value = '';
         }
-        togglePreview();
+        togglePreview('<br>');
     } else if (event.key == "ArrowUp") {
         recall_expr(false);
     } else if (event.key == "ArrowDown") {
@@ -163,7 +163,7 @@ math_input.addEventListener("keyup", function (event) {
     } else {
         let res = evaluate(math_input.value, false, true);
         if (res.err) {
-            togglePreview();
+            togglePreview('<br>');
         }
         else {
             togglePreview(res.res);
