@@ -44,7 +44,7 @@ function evaluate(expr, add_vars, mutable) {
         //         modified_expr = modified_expr.replace(v, '(' + vars[v] + ')');
         //     }
         // }
-        result = math.evaluate(modified_expr, vars, true);
+        result = math.evaluate(modified_expr, vars);
         added_vars.forEach(function (v) {
             vars[v] = result;
         });
@@ -137,7 +137,7 @@ function updateHistory() {
         defaultOutputArrowCell.innerHTML = "&rarr;";
     }
 }
-function togglePreview() {
+function togglePreview(msg) {
     math_preview.innerHTML = msg;
 }
 
