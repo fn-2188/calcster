@@ -13,7 +13,7 @@ let immutables = [];
 let temp_expr = undefined;
 
 math_preview.innerHTML = '<br>';
-function evaluate(expr, add_vars, mutable = true) {
+function evaluate(expr, add_vars, mutable) {
     let added_vars = [];
     let modified_expr = expr;
     try {
@@ -44,8 +44,8 @@ function evaluate(expr, add_vars, mutable = true) {
         //         modified_expr = modified_expr.replace(v, '(' + vars[v] + ')');
         //     }
         // }
-        result = math.evaluate(modified_expr, vars);
-        added_vars.forEach((v) => {
+        result = math.evaluate(modified_expr, vars, true);
+        added_vars.forEach(function (v) {
             vars[v] = result;
         });
         if (add_vars) {
@@ -61,7 +61,7 @@ function evaluate(expr, add_vars, mutable = true) {
         return { err: true, eval_expr: modified_expr, res: error.message, added_vars: added_vars };
     }
 }
-function createVar(name, value){
+function createVar(name, value) {
     let p = document.createElement('div');
     p.classList.add('p-1');
     p.innerHTML = '<b>' + name + '</b>=' + value;
@@ -74,7 +74,7 @@ function createCard(parent, title, eqns) {
     div1.classList.add('card', 'p-3', 'equation-card');
     let h = document.createElement('h3');
     let p = document.createElement('p');
-    eqns.forEach((eq, i) => {
+    eqns.forEach(function (eq, i) {
         p.innerHTML += '$$' + eq + '$$';
         if (i != eqns.length - 1) {
             p.innerHTML += '<br>';
@@ -127,7 +127,7 @@ function log_expr(err, eval_input, expr, res) {
     updateHistory();
 }
 function updateHistory() {
-    expressions.forEach((exp, i) => {
+    expressions.forEach(function (exp) {
         exp.row.cells[0].innerHTML = '';
     });
     if (expr_index >= 0) {
@@ -149,7 +149,7 @@ function setExpression(val) {
 math_input.addEventListener("keyup", function (event) {
     if (event.key == "Enter") {
         let expr = math_input.value;
-        let res = evaluate(expr, true);
+        let res = evaluate(expr, true, true);
         log_expr(res.err, expr, res.eval_expr, res.res);
         refresh_vars();
         if (!res.err) {
@@ -161,7 +161,7 @@ math_input.addEventListener("keyup", function (event) {
     } else if (event.key == "ArrowDown") {
         recall_expr(true);
     } else {
-        let res = evaluate(math_input.value, false);
+        let res = evaluate(math_input.value, false, true);
         if (res.err) {
             togglePreview();
         }
