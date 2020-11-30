@@ -215,5 +215,6 @@ evaluate('amCl=35.4527 g/mol', true, false);
 math.createUnit('cal', '4.184 J');
 math.createUnit('kcal', '1000 cal');
 math.createUnit('D', '3.336e-30 C*m');
+math.createUnit('M', '1 mol/L');
 refresh_vars();
 updateHistory();
