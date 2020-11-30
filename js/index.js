@@ -173,13 +173,14 @@ math_input.addEventListener("keyup", function (event) {
 createCard(eqnParent, "Atomic Absorption and Emission",
     ['E_{n} = -2.178*10^{-18} J \\frac{Z^2}{n^2}',
         'E_{photon}=|\\Delta E|']);
+        createCard(eqnParent, "Relative and Absolute Error", ['\\text{Absolute Error}=measured-literature', '\\text{Relative Error}=\\frac{measured-literature}{literature}'])
 createCard(eqnParent, "Heisenburg Uncertainty Principle",
     ['\\Delta x \\Delta p \\geq \\frac{h}{4 \\pi}']);
 createCard(eqnParent, "Light and Energy",
     ['E=hv=\\frac{hc}{\\lambda}',
-        'E=K + V = \\frac{1}{2}mv^{2}+V(x)=\\frac{p^{2}}{2m}+V(x)']);
-createCard(eqnParent, "Particle Wave Duality",
-    ['\\lambda=\\frac{h}{mv}']);
+        'E=K + V = \\frac{1}{2}mv^{2}+V(x)=\\frac{p^{2}}{2m}+V(x)', '1J=1kg\\frac{m^{2}}{s^{2}}']);
+createCard(eqnParent, "Particle Wave Duality/de Broglie Wavelength",
+    ['\\lambda=\\frac{h}{mv}', '\\text{If the de Broglie wavelength }\\geq \\text{ than size of object, need quantum mechanics to describe it}']);
 createCard(eqnParent, "Particle in a box",
     ['\\psi(x)=Asin(\\frac{nx}{L})',
         'E=\\frac{n^{2}h^{2}}{8mL^{2}}',
@@ -195,10 +196,22 @@ createCard(eqnParent, 'Electronegativity',
     ['\\text{Expected bond energy}=\\sqrt{(\\text{H-H bond energy})*(\\text{X-X bond energy})}',
         '\\text{Difference}=\\Delta=(H-X)_{actual}-(H-H)_{expected}',
         '\\text{EN(X)}-\\text{EN(H)}=0.102\\sqrt{\\Delta}']);
+createCard(eqnParent, 'Molar Mass',
+    ['\\text{mass}=\\text{mols} * \\text{molar mass}',
+        '\\text{Mass fraction}=\\frac{\\text{mass/mol of element}}{\\text{mass/mol of molecule}}']);
+createCard(eqnParent, 'Molarity',
+    ['\\text{Solute: thing being dissolved}', '\\text{Solvent: dissolving medium}', 'M=\\text{molarity}=\\frac{\\text{moles of solute}}{\\text{liters of solution}}',
+        'M_{1}V_{1}=M_{2}V_{2}']);
+
 evaluate('c=3e8 m/s', true, false);
 evaluate('h=(6.626e-34 m^2 kg/s)', true, false);
 evaluate('Ry=2.178e-18 J', true, false)
 evaluate('me=electronMass', true, false);
+evaluate('amH=1.00794 g/mol', true, false);
+evaluate('amC=12.0107 g/mol', true, false);
+evaluate('amO=15.9994 g/mol', true, false);
+evaluate('amN=14.0067 g/mol', true, false);
+evaluate('amCl=35.4527 g/mol', true, false);
 math.createUnit('cal', '4.184 J');
 math.createUnit('kcal', '1000 cal');
 math.createUnit('D', '3.336e-30 C*m');
