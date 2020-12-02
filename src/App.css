@@ -19,11 +19,7 @@ h1, h2, p{
   font-size: 14px;
   width: 5em;
 }
-th, td{
-  padding: 1em;
-  text-align: center;
-  border: 1px solid black;
-}
+
 body{
   font-family: "Encode Sans", sans-serif;
 }
@@ -35,4 +31,21 @@ body{
 }
 .equation, .equation-data{
   margin: 0.5em;
+}
+.solubility-table{
+  width: 400px;
+}
+.solubility-table th{
+  font-weight: 400!important;
+  border:none!important;
+}
+.solubility-table th, .solubility-table td{
+  text-align: center;
+  padding: 0!important;
+  margin: 0!important;
+}
+#output th, #output td{
+  padding: 1em;
+  text-align: center;
+  border: 1px solid black;
 }

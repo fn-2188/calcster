@@ -2,7 +2,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "mathjs";
 import React, { useState } from "react";
-import { evaluateFunction } from "./Math.js";
+import { evaluateFunction } from "./Math";
+import { ActivitySeries, SolubilityTable } from "./ChemistryData";
 var Latex = require("react-latex");
 
 class ErrorBoundary extends React.Component {
@@ -58,15 +59,17 @@ function EquationCard(props) {
     ));
   }
   return (
-    <div className="col m-3 d-flex">
-      <div className="card p-3 equation-card">
-        <h3>{title}</h3>
-        <div>
-          {cards}
-          {equationRows}
+    <ErrorBoundary>
+      <div className="col m-3 d-flex">
+        <div className="card p-3 equation-card">
+          <h3>{title}</h3>
+          <div>
+            {cards}
+            {equationRows}
+          </div>
         </div>
       </div>
-    </div>
+    </ErrorBoundary>
   );
 }
 
@@ -376,136 +379,11 @@ function App(props) {
               />
               <EquationCard
                 title="Solubility Table"
-                cards={[
-                  <div>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td>Ion</td>
-                          <td>Solubility</td>
-                          <td>Exceptions</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            NO<sub>3</sub>
-                            <sup>–</sup>
-                          </td>
-                          <td>soluble</td>
-                          <td>none</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            ClO<sub>4</sub>
-                            <sup>–</sup>
-                          </td>
-                          <td>soluble</td>
-                          <td>none</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Cl<sup>–</sup>
-                          </td>
-                          <td>soluble</td>
-                          <td>
-                            <p>&nbsp;</p>
-                            except Ag<sup>+</sup>, Hg<sub>2</sub>
-                            <sup>2+</sup>, *Pb<sup>2+</sup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            I<sup>–</sup>
-                          </td>
-                          <td>soluble</td>
-                          <td>
-                            except Ag<sup>+</sup>, Hg<sub>2</sub>
-                            <sup>2+</sup>, *Pb<sup>2+</sup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            SO<sub>4</sub>
-                            <sup>2-</sup>
-                          </td>
-                          <td>soluble</td>
-                          <td>
-                            except Ca<sup>2+</sup>, Ba<sup>2+</sup>, Sr
-                            <sup>2+</sup>, Hg<sup>2+</sup>, Pb<sup>2+</sup>, Ag
-                            <sup>+</sup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            CO<sub>3</sub>
-                            <sup>2-</sup>
-                          </td>
-                          <td>insoluble</td>
-                          <td>
-                            except Group IA and NH<sub>4</sub>
-                            <sup>+</sup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            PO<sub>4</sub>
-                            <sup>3-</sup>
-                          </td>
-                          <td>insoluble</td>
-                          <td>
-                            except Group IA and NH<sub>4</sub>
-                            <sup>+</sup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            OH<sup>–</sup>
-                          </td>
-                          <td>insoluble</td>
-                          <td>
-                            except Group IA, *Ca<sup>2+</sup>, Ba<sup>2+</sup>,
-                            Sr<sup>2+</sup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            S<sup>2-</sup>
-                          </td>
-                          <td>insoluble</td>
-                          <td>
-                            except Group IA, IIA and NH<sub>4</sub>
-                            <sup>+</sup>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            Na<sup>+</sup>
-                          </td>
-                          <td>soluble</td>
-                          <td>none</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            K<sup>+</sup>
-                          </td>
-                          <td>soluble</td>
-                          <td>none</td>
-                        </tr>
-                        <tr>
-                          <td>
-                            NH<sub>4</sub>
-                            <sup>+</sup>
-                          </td>
-                          <td>soluble</td>
-                          <td>none</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    From{" "}
-                    <a href="http://intro.chem.okstate.edu/1515SP01/Database/Solub.html">
-                      chem.okstate.edu
-                    </a>
-                  </div>,
-                ]}
+                cards={[<SolubilityTable />]}
+              />
+              <EquationCard
+                title="Activity Series"
+                cards={[<ActivitySeries />]}
               />
             </ErrorBoundary>
           </div>
