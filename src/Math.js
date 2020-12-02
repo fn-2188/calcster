@@ -1,4 +1,4 @@
-import { evaluate } from "mathjs";
+import { format, evaluate } from "mathjs";
 
 export function evaluateFunction(expr, mutable, vars) {
   let varsToAdd = [];
@@ -29,14 +29,14 @@ export function evaluateFunction(expr, mutable, vars) {
     for (let v in vars) {
       mappedVariables[v] = vars[v].value;
     }
-    result = evaluate(modified_expr, mappedVariables).toString();
+    result = evaluate(modified_expr, mappedVariables);
     let newVars = {};
     varsToAdd.forEach((nv) => {
       newVars[nv] = { value: result, mutable: mutable };
     });
     return {
       err: false,
-      result: result,
+      result: format(result, {precision:14}),
       input: expr,
       evaluatedExpression: modified_expr,
       newVars: newVars,

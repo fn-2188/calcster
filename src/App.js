@@ -48,7 +48,7 @@ function VariableEntry(props) {
   let { name, value, mutable } = props;
   return (
     <div className={mutable ? "pl-3 p-1" : "pl-3 p-1 bg-secondary"}>
-      <b>{name}</b>={value}
+      <b>{name}</b>={value.toString()}
     </div>
   );
 }
@@ -142,7 +142,6 @@ function Calculator(props) {
   const [typedEquation, setTypedEquation] = useState("");
   const [activeIndex, setActiveIndex] = useState(-1);
   const [vars, setVars] = useState(props.variables);
-  const [previewResult, setPreviewResult] = useState("");
   const [inputValue, setInputValue] = useState("");
   let varEntries = Object.keys(vars).map((key, i) => (
     <VariableEntry
@@ -163,37 +162,40 @@ function Calculator(props) {
       setInputValue(newIndex >= 0 ? equations[newIndex].input : typedEquation);
     } else {
       let expr = event.target.value;
-      let res = evaluateFunction(expr, true, vars);
       if (event.key === "Enter") {
+        let res = evaluateFunction(expr, true, vars);
         if (expr.replace(" ", "").length > 0) {
+          let newVars = {};
           if (Object.keys(res.newVars).length > 0) {
-            let newVars = { ...vars };
             for (let x in res.newVars) {
               newVars[x] = res.newVars[x];
             }
-            setVars(newVars);
           }
           if (!res.err) {
-            setVars({ ...vars, ans: {value: res.result, mutable: false }});
+            newVars.ans = { value: res.result, mutable: false };
+          }
+          if (Object.keys(newVars).length > 0) {
+            setVars({ ...vars, ...newVars });
           }
           setEquations([
             { input: res.input, result: res.result, success: !res.err },
             ...equations,
           ]);
-          setPreviewResult("");
           setInputValue("");
         }
       } else {
         setActiveIndex(-1);
         setTypedEquation(expr);
-        if (res.err) {
-          setPreviewResult("");
-        } else {
-          setPreviewResult(res.result);
-        }
       }
     }
   };
+  let previewResult = "";
+  if (inputValue.length > 0) {
+    let res = evaluateFunction(inputValue, true, vars);
+    if (!res.err) {
+      previewResult = res.result;
+    }
+  }
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -294,7 +296,7 @@ function App(props) {
                 ]}
               />
               <EquationCard
-                title="Heisenburg Uncertainty Principle"
+                title="Heisenberg Uncertainty Principle"
                 equations={[
                   {
                     value: "$$\\Delta x \\Delta p \\geq \\frac{h}{4 \\pi}$$",
@@ -435,6 +437,35 @@ function App(props) {
                 title="Molecular Geometry"
                 cards={[<MolecularGeometry key="mg" />]}
                 xl={true}
+              />
+              <EquationCard
+                title="Reaction Rate"
+                equations={[
+                  {
+                    value:
+                      "Under conditions where reverse reaction can be neglected",
+                    isEquation: false,
+                  },
+                  {
+                    value:
+                      "$$\\text{Avg Rate}=|\\frac{\\Delta[A]}{\\Delta t}|$$",
+                    isEquation: true,
+                  },
+                  {
+                    value: "A is specific reactant or product",
+                    isEquation: false,
+                  },
+                  {
+                    value:
+                      "$$\\text{Differential rate law}=k[Reactant]^{x}[Reactant]^{y}$$",
+                    isEquation: true,
+                  },
+                  {
+                    value:
+                      "$$\\text{Rate of reaction}=-\\frac{1}{a}\\frac{d[A]}{dt}=-\\frac{1}{b}\\frac{d[B]}{dt}=\\frac{1}{c}\\frac{d[C]}{dt}=\\frac{1}{d}\\frac{d[D]}{dt}$$",
+                    isEquation: true,
+                  },
+                ]}
               />
             </ErrorBoundary>
           </div>
