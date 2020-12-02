@@ -375,7 +375,7 @@ function App(props) {
                 ]}
               />
               <EquationCard
-                title="Molarity"
+                title="Solubility Table"
                 cards={[
                   <div>
                     <table>
