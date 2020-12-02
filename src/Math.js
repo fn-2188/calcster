@@ -14,7 +14,7 @@ export function evaluateFunction(expr, mutable, vars) {
       }
       let v = args[0].replace(" ", "");
       if (v in vars && !vars[v].mutable) {
-        throw new Error("Cannot change this value, it is a constant.");
+        throw new Error(`Cannot change value '${v}'`);
       }
       // TODO check for any unit being assigned
       if (v === "m") {
