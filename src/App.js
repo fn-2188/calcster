@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { evaluateFunction } from "./Math";
 import { ActivitySeries, SolubilityTable } from "./ChemistryData";
 var Latex = require("react-latex");
-
+const arrow = <span>&rarr;</span>;
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -49,9 +49,9 @@ function VariableEntry(props) {
   );
 }
 function EquationCard(props) {
-  let { title, equations, cards } = props;
+  let { title, equations, cards, xl, open } = props;
   let equationRows;
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(!open);
   if (!collapsed && equations !== undefined) {
     equationRows = equations.map((x, i) => (
       <div className={x.isEquation ? "equation" : "equation-data"} key={i}>
@@ -65,30 +65,29 @@ function EquationCard(props) {
   const onClick = () => {
     setCollapsed(!collapsed);
   };
-  let toggleButton;
-  if (!collapsed) {
-    toggleButton = (
-      <button
-        type="button"
-        className="close collapse-button"
-        aria-label="Close"
-        onClick={onClick}
-      >
-        <span aria-hidden="true">&times;</span>
-      </button>
-    );
-  } else {
-    toggleButton = (
-      <button className="d-inline btn btn-primary" onClick={onClick}>
-        Expand
-      </button>
-    );
-  }
+  let toggleButton = (
+    <button
+      type="button"
+      className="close collapse-button"
+      aria-label="Close"
+      onClick={onClick}
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  );
+
   return (
     <ErrorBoundary>
-      <div className="col m-3 d-flex">
-        <div className="card p-3 equation-card">
-          {toggleButton}
+      <div
+        onClick={collapsed ? onClick : undefined}
+        className={
+          xl
+            ? "col-sm-12 col-md-12 col-xl-8 p-1"
+            : "col-sm-12 col-md-6 col-xl-4 p-1"
+        }
+      >
+        <div className="card p-1 equation-card">
+          {!collapsed ? toggleButton : undefined}
           <h3 className="ml-3 d-inline">{title}</h3>
           <div>
             {cards}
@@ -105,7 +104,7 @@ function OutputTableRow(props) {
   let { input, result, success } = props.equation;
   return (
     <tr className={success ? "bg-success" : "bg-warning"}>
-      <td>{pointing ? "->" : ""}</td>
+      <td>{pointing ? arrow : ""}</td>
       <td>{input}</td>
       <td>{result}</td>
     </tr>
@@ -121,7 +120,7 @@ function OutputTable(props) {
     <table id="output_table">
       <thead>
         <tr>
-          <th>{activeIndex < 0 ? "->" : ""}</th>
+          <th>{activeIndex < 0 ? arrow : ""}</th>
           <th>Input</th>
           <th>Result</th>
         </tr>
@@ -132,9 +131,10 @@ function OutputTable(props) {
 }
 function Calculator(props) {
   const [equations, setEquations] = useState([]);
+  const [typedEquation, setTypedEquation] = useState("");
   const [activeIndex, setActiveIndex] = useState(-1);
   const [vars, setVars] = useState(props.variables);
-  const [previewResult, setPreviewResult] = useState(" ");
+  const [previewResult, setPreviewResult] = useState("");
   const [inputValue, setInputValue] = useState("");
   let varEntries = Object.keys(vars).map((key, i) => (
     <VariableEntry
@@ -146,9 +146,13 @@ function Calculator(props) {
   ));
   const handleInputEvent = (event) => {
     if (event.key === "ArrowUp") {
-      setActiveIndex(Math.max(activeIndex - 1, -1));
+      let newIndex = Math.max(activeIndex - 1, -1);
+      setActiveIndex(newIndex);
+      setInputValue(newIndex >= 0 ? equations[newIndex].input : typedEquation);
     } else if (event.key === "ArrowDown") {
-      setActiveIndex(Math.min(activeIndex + 1, equations.length - 1));
+      let newIndex = Math.min(activeIndex + 1, equations.length - 1);
+      setActiveIndex(newIndex);
+      setInputValue(newIndex >= 0 ? equations[newIndex].input : typedEquation);
     } else {
       let expr = event.target.value;
       let res = evaluateFunction(expr, true, vars);
@@ -165,12 +169,14 @@ function Calculator(props) {
             { input: res.input, result: res.result, success: !res.err },
             ...equations,
           ]);
-          setPreviewResult(" ");
+          setPreviewResult("");
           setInputValue("");
         }
       } else {
+        setActiveIndex(-1);
+        setTypedEquation(expr);
         if (res.err) {
-          setPreviewResult(" ");
+          setPreviewResult("");
         } else {
           setPreviewResult(res.result);
         }
@@ -226,6 +232,7 @@ function Calculator(props) {
                   <span className="input-group-text">Equation</span>
                 </div>
                 <input
+                  autoComplete="off"
                   type="text"
                   id="console_input"
                   className="form-control input-lg"
@@ -263,7 +270,7 @@ function App(props) {
       <h2 className="mt-3">Equations</h2>
       <main>
         <div className="container-fluid">
-          <div id="eqn-parent" className="row">
+          <div id="eqn-parent" className="d-flex flex-wrap">
             <ErrorBoundary>
               <EquationCard
                 title="Atomic Absorption and Emission"
@@ -407,6 +414,7 @@ function App(props) {
               <EquationCard
                 title="Solubility Table"
                 cards={[<SolubilityTable />]}
+                xl={true}
               />
               <EquationCard
                 title="Activity Series"
