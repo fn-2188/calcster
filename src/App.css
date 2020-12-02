@@ -68,3 +68,9 @@ body {
   top: 0.5em;
   left: 0.5em;
 }
+.open-button {
+  cursor: pointer;
+}
+.open-button:hover, .open-button:active {
+  background-color: #85beff;
+}

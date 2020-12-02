@@ -1159,7 +1159,7 @@ export function ActivitySeries() {
 }
 export function MolecularGeometry(){
   return( <div>
-    <table className="table" >
+    <table className="table">
   
     <thead><tr>
     <th scope="col">Atoms bonded to <br />central atom
@@ -1189,7 +1189,7 @@ export function MolecularGeometry(){
     </td>
     <td>CO<sub>2</sub>
     </td>
-    <td><img alt="Linear-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/50px-Linear-3D-balls.png" decoding="async" width="50" height="23" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/75px-Linear-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/100px-Linear-3D-balls.png 2x" data-file-width="1100" data-file-height="508" />
+    <td><img alt="Linear-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/50px-Linear-3D-balls.png" decoding="async" width="50" height="23"  data-file-width="1100" data-file-height="508" />
     </td></tr>
     <tr>
     <td>3
@@ -1204,7 +1204,7 @@ export function MolecularGeometry(){
     </td>
     <td>BF<sub>3</sub>
     </td>
-    <td><img alt="Trigonal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Trigonal-3D-balls.png/50px-Trigonal-3D-balls.png" decoding="async" width="50" height="44" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Trigonal-3D-balls.png/75px-Trigonal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Trigonal-3D-balls.png/100px-Trigonal-3D-balls.png 2x" data-file-width="1100" data-file-height="967" />
+    <td><img alt="Trigonal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Trigonal-3D-balls.png/50px-Trigonal-3D-balls.png" decoding="async" width="50" height="44"  data-file-width="1100" data-file-height="967" />
     </td></tr>
     <tr>
     <td>2
@@ -1219,7 +1219,7 @@ export function MolecularGeometry(){
     </td>
     <td>SO<sub>2</sub>
     </td>
-    <td><img alt="Bent-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/50px-Bent-3D-balls.png" decoding="async" width="50" height="34" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/75px-Bent-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/100px-Bent-3D-balls.png 2x" data-file-width="1100" data-file-height="750" />
+    <td><img alt="Bent-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/50px-Bent-3D-balls.png" decoding="async" width="50" height="34"  data-file-width="1100" data-file-height="750" />
     </td></tr>
     <tr>
     <td>4
@@ -1234,7 +1234,7 @@ export function MolecularGeometry(){
     </td>
     <td>CH<sub>4</sub>
     </td>
-    <td><img alt="AX4E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/AX4E0-3D-balls.png/50px-AX4E0-3D-balls.png" decoding="async" width="50" height="50" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/AX4E0-3D-balls.png/75px-AX4E0-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f4/AX4E0-3D-balls.png/100px-AX4E0-3D-balls.png 2x" data-file-width="1092" data-file-height="1100" />
+    <td><img alt="AX4E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/AX4E0-3D-balls.png/50px-AX4E0-3D-balls.png" decoding="async" width="50" height="50"  data-file-width="1092" data-file-height="1100" />
     </td></tr>
     <tr>
     <td>3
@@ -1249,7 +1249,7 @@ export function MolecularGeometry(){
     </td>
     <td>NH<sub>3</sub>
     </td>
-    <td><img alt="Pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramidal-3D-balls.png/50px-Pyramidal-3D-balls.png" decoding="async" width="50" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramidal-3D-balls.png/75px-Pyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramidal-3D-balls.png/100px-Pyramidal-3D-balls.png 2x" data-file-width="1100" data-file-height="878" />
+    <td><img alt="Pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramidal-3D-balls.png/50px-Pyramidal-3D-balls.png" decoding="async" width="50" height="40"  data-file-width="1100" data-file-height="878" />
     </td></tr>
     <tr>
     <td>2
@@ -1264,7 +1264,7 @@ export function MolecularGeometry(){
     </td>
     <td>H<sub>2</sub>O
     </td>
-    <td><img alt="Bent-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/50px-Bent-3D-balls.png" decoding="async" width="50" height="34" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/75px-Bent-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/100px-Bent-3D-balls.png 2x" data-file-width="1100" data-file-height="750" />
+    <td><img alt="Bent-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/50px-Bent-3D-balls.png" decoding="async" width="50" height="34"  data-file-width="1100" data-file-height="750" />
     </td></tr>
     <tr>
     <td>5
@@ -1279,7 +1279,7 @@ export function MolecularGeometry(){
     </td>
     <td>PCl<sub>5</sub>
     </td>
-    <td><img alt="Trigonal-bipyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Trigonal-bipyramidal-3D-balls.png/50px-Trigonal-bipyramidal-3D-balls.png" decoding="async" width="50" height="57" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Trigonal-bipyramidal-3D-balls.png/75px-Trigonal-bipyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Trigonal-bipyramidal-3D-balls.png/100px-Trigonal-bipyramidal-3D-balls.png 2x" data-file-width="968" data-file-height="1100" />
+    <td><img alt="Trigonal-bipyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Trigonal-bipyramidal-3D-balls.png/50px-Trigonal-bipyramidal-3D-balls.png" decoding="async" width="50" height="57"  data-file-width="968" data-file-height="1100" />
     </td></tr>
     <tr>
     <td>4
@@ -1294,7 +1294,7 @@ export function MolecularGeometry(){
     </td>
     <td>SF<sub>4</sub>
     </td>
-    <td><img alt="Seesaw-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Seesaw-3D-balls.png/50px-Seesaw-3D-balls.png" decoding="async" width="50" height="27" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Seesaw-3D-balls.png/75px-Seesaw-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Seesaw-3D-balls.png/100px-Seesaw-3D-balls.png 2x" data-file-width="1100" data-file-height="600" />
+    <td><img alt="Seesaw-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Seesaw-3D-balls.png/50px-Seesaw-3D-balls.png" decoding="async" width="50" height="27"  data-file-width="1100" data-file-height="600" />
     </td></tr>
     <tr>
     <td>3
@@ -1309,7 +1309,7 @@ export function MolecularGeometry(){
     </td>
     <td>ClF<sub>3</sub>
     </td>
-    <td><img alt="T-shaped-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/T-shaped-3D-balls.png/50px-T-shaped-3D-balls.png" decoding="async" width="50" height="37" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/T-shaped-3D-balls.png/75px-T-shaped-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b9/T-shaped-3D-balls.png/100px-T-shaped-3D-balls.png 2x" data-file-width="1100" data-file-height="805" />
+    <td><img alt="T-shaped-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/T-shaped-3D-balls.png/50px-T-shaped-3D-balls.png" decoding="async" width="50" height="37"  data-file-width="1100" data-file-height="805" />
     </td></tr>
     <tr>
     <td>2
@@ -1324,7 +1324,7 @@ export function MolecularGeometry(){
     </td>
     <td>XeF<sub>2</sub>
     </td>
-    <td><img alt="Linear-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/50px-Linear-3D-balls.png" decoding="async" width="50" height="23" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/75px-Linear-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/100px-Linear-3D-balls.png 2x" data-file-width="1100" data-file-height="508" />
+    <td><img alt="Linear-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/50px-Linear-3D-balls.png" decoding="async" width="50" height="23"  data-file-width="1100" data-file-height="508" />
     </td></tr>
     <tr>
     <td>6
@@ -1339,7 +1339,7 @@ export function MolecularGeometry(){
     </td>
     <td>SF<sub>6</sub>
     </td>
-    <td><img alt="AX6E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/AX6E0-3D-balls.png/50px-AX6E0-3D-balls.png" decoding="async" width="50" height="53" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/AX6E0-3D-balls.png/75px-AX6E0-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/52/AX6E0-3D-balls.png/100px-AX6E0-3D-balls.png 2x" data-file-width="1035" data-file-height="1100" />
+    <td><img alt="AX6E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/AX6E0-3D-balls.png/50px-AX6E0-3D-balls.png" decoding="async" width="50" height="53"  data-file-width="1035" data-file-height="1100" />
     </td></tr>
     <tr>
     <td>5
@@ -1354,7 +1354,7 @@ export function MolecularGeometry(){
     </td>
     <td>BrF<sub>5</sub>
     </td>
-    <td><img alt="Square-pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Square-pyramidal-3D-balls.png/50px-Square-pyramidal-3D-balls.png" decoding="async" width="50" height="41" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Square-pyramidal-3D-balls.png/75px-Square-pyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/af/Square-pyramidal-3D-balls.png/100px-Square-pyramidal-3D-balls.png 2x" data-file-width="1100" data-file-height="891" />
+    <td><img alt="Square-pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Square-pyramidal-3D-balls.png/50px-Square-pyramidal-3D-balls.png" decoding="async" width="50" height="41"  data-file-width="1100" data-file-height="891" />
     </td></tr>
     <tr>
     <td>4
@@ -1369,7 +1369,7 @@ export function MolecularGeometry(){
     </td>
     <td>XeF<sub>4</sub>
     </td>
-    <td><img alt="Square-planar-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Square-planar-3D-balls.png/50px-Square-planar-3D-balls.png" decoding="async" width="50" height="36" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Square-planar-3D-balls.png/75px-Square-planar-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Square-planar-3D-balls.png/100px-Square-planar-3D-balls.png 2x" data-file-width="1100" data-file-height="796" />
+    <td><img alt="Square-planar-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Square-planar-3D-balls.png/50px-Square-planar-3D-balls.png" decoding="async" width="50" height="36"  data-file-width="1100" data-file-height="796" />
     </td></tr>
     <tr>
     <td>7
@@ -1384,7 +1384,7 @@ export function MolecularGeometry(){
     </td>
     <td>IF<sub>7</sub>
     </td>
-    <td><img alt="Pentagonal-bipyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pentagonal-bipyramidal-3D-balls.png/50px-Pentagonal-bipyramidal-3D-balls.png" decoding="async" width="50" height="50" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pentagonal-bipyramidal-3D-balls.png/75px-Pentagonal-bipyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pentagonal-bipyramidal-3D-balls.png/100px-Pentagonal-bipyramidal-3D-balls.png 2x" data-file-width="1100" data-file-height="1096" />
+    <td><img alt="Pentagonal-bipyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pentagonal-bipyramidal-3D-balls.png/50px-Pentagonal-bipyramidal-3D-balls.png" decoding="async" width="50" height="50"  data-file-width="1100" data-file-height="1096" />
     </td></tr>
     <tr>
     <td>6
@@ -1399,7 +1399,7 @@ export function MolecularGeometry(){
     </td>
     <td>XeOF<sub>5</sub><sup>−</sup>
     </td>
-    <td><img alt="Pentagonal-pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Pentagonal-pyramidal-3D-balls.png/50px-Pentagonal-pyramidal-3D-balls.png" decoding="async" width="50" height="37" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Pentagonal-pyramidal-3D-balls.png/75px-Pentagonal-pyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Pentagonal-pyramidal-3D-balls.png/100px-Pentagonal-pyramidal-3D-balls.png 2x" data-file-width="1100" data-file-height="816" />
+    <td><img alt="Pentagonal-pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Pentagonal-pyramidal-3D-balls.png/50px-Pentagonal-pyramidal-3D-balls.png" decoding="async" width="50" height="37"  data-file-width="1100" data-file-height="816" />
     </td></tr>
     <tr>
     <td>5
@@ -1414,7 +1414,7 @@ export function MolecularGeometry(){
     </td>
     <td>XeF<sub>5</sub><sup>−</sup>
     </td>
-    <td><img alt="Pentagonal-planar-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pentagonal-planar-3D-balls.png/50px-Pentagonal-planar-3D-balls.png" decoding="async" width="50" height="31" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pentagonal-planar-3D-balls.png/75px-Pentagonal-planar-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pentagonal-planar-3D-balls.png/100px-Pentagonal-planar-3D-balls.png 2x" data-file-width="2000" data-file-height="1229" />
+    <td><img alt="Pentagonal-planar-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pentagonal-planar-3D-balls.png/50px-Pentagonal-planar-3D-balls.png" decoding="async" width="50" height="31"  data-file-width="2000" data-file-height="1229" />
     </td></tr>
     <tr>
     <td>8
@@ -1429,7 +1429,7 @@ export function MolecularGeometry(){
     </td>
     <td>XeF<sub>8</sub><sup>2−</sup>
     </td>
-    <td><img alt="Square-antiprismatic-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Square-antiprismatic-3D-balls.png/50px-Square-antiprismatic-3D-balls.png" decoding="async" width="50" height="44" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Square-antiprismatic-3D-balls.png/75px-Square-antiprismatic-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Square-antiprismatic-3D-balls.png/100px-Square-antiprismatic-3D-balls.png 2x" data-file-width="2000" data-file-height="1769" />
+    <td><img alt="Square-antiprismatic-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Square-antiprismatic-3D-balls.png/50px-Square-antiprismatic-3D-balls.png" decoding="async" width="50" height="44"  data-file-width="2000" data-file-height="1769" />
     </td></tr>
     <tr>
     <td>9
@@ -1444,7 +1444,7 @@ export function MolecularGeometry(){
     </td>
     <td>ReH<sub>9</sub><sup>2−</sup>
     </td>
-    <td><img alt="AX9E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/AX9E0-3D-balls.png/50px-AX9E0-3D-balls.png" decoding="async" width="50" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/AX9E0-3D-balls.png/75px-AX9E0-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4d/AX9E0-3D-balls.png/100px-AX9E0-3D-balls.png 2x" data-file-width="1865" data-file-height="2000" />
+    <td><img alt="AX9E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/AX9E0-3D-balls.png/50px-AX9E0-3D-balls.png" decoding="async" width="50" height="54"  data-file-width="1865" data-file-height="2000" />
     </td></tr></tbody><tfoot></tfoot></table>
     From{" "}
       <a href="https://en.wikipedia.org/wiki/Molecular_geometry">Wikipedia</a>

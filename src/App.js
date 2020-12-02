@@ -84,13 +84,12 @@ function EquationCard(props) {
     <ErrorBoundary>
       <div
         onClick={collapsed ? onClick : undefined}
-        className={
-          xl
+        className={(xl
             ? "col-sm-12 col-md-12 col-xl-8 p-1"
-            : "col-sm-12 col-md-6 col-xl-4 p-1"
+            : "col-sm-12 col-md-6 col-xl-4 p-1")
         }
       >
-        <div className="card p-1 equation-card">
+        <div className={(collapsed ? "open-button " : "") + "card p-1 equation-card"}>
           {!collapsed ? toggleButton : undefined}
           <h3 className="ml-3 d-inline">{title}</h3>
           <div>
@@ -417,16 +416,16 @@ function App(props) {
               />
               <EquationCard
                 title="Solubility Table"
-                cards={[<SolubilityTable />]}
+                cards={[<SolubilityTable key="st"/>]}
                 xl={true}
               />
               <EquationCard
                 title="Activity Series"
-                cards={[<ActivitySeries />]}
+                cards={[<ActivitySeries key="as"/>]}
               />
               <EquationCard
                 title="Molecular Geometry"
-                cards={[<MolecularGeometry />]}
+                cards={[<MolecularGeometry key="mg"/>]}
                 xl={true}
               />
             </ErrorBoundary>
