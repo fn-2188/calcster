@@ -1,51 +1,70 @@
-.flex-container{
+.flex-container {
   /* display: flex; */
   padding-bottom: 20em;
 }
-#console_input{
+#console_input {
   height: 4em;
 }
-#preview{
+#preview {
   text-align: center;
   min-height: 24px;
 }
-#equations{
+#equations {
   width: 100%;
 }
-h1, h2, p{
+h1,
+h2,
+p {
   text-align: center;
 }
-.var-text{
+.var-text {
   font-size: 14px;
   width: 5em;
 }
 
-body{
+body {
   font-family: "Encode Sans", sans-serif;
 }
 .equation-card {
   text-align: center;
 }
-.equation{
+.equation {
   white-space: nowrap;
 }
-.equation, .equation-data{
+.equation,
+.equation-data {
   margin: 0.5em;
 }
-.solubility-table{
+.activity-table th,
+.activity-table td {
+  margin: 0em !important;
+  padding: 0.25em !important;
+}
+.solubility-table {
   width: 400px;
 }
-.solubility-table th{
-  font-weight: 400!important;
-  border:none!important;
-}
-.solubility-table th, .solubility-table td{
+.solubility-table th,
+.solubility-table td {
   text-align: center;
-  padding: 0!important;
-  margin: 0!important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 1em;
+  font-size: 13px;
 }
-#output th, #output td{
+.solubility-table th {
+  font-weight: 400 !important;
+  border: none !important;
+  white-space: nowrap;
+  font-size: 11px;
+}
+#output th,
+#output td {
   padding: 1em;
   text-align: center;
   border: 1px solid black;
+}
+.collapse-button {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
 }

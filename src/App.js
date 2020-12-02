@@ -51,18 +51,45 @@ function VariableEntry(props) {
 function EquationCard(props) {
   let { title, equations, cards } = props;
   let equationRows;
-  if (equations !== undefined) {
+  const [collapsed, setCollapsed] = useState(false);
+  if (!collapsed && equations !== undefined) {
     equationRows = equations.map((x, i) => (
       <div className={x.isEquation ? "equation" : "equation-data"} key={i}>
         <Latex>{x.value}</Latex>
       </div>
     ));
   }
+  if (collapsed) {
+    cards = undefined;
+  }
+  const onClick = () => {
+    setCollapsed(!collapsed);
+  };
+  let toggleButton;
+  if (!collapsed) {
+    toggleButton = (
+      <button
+        type="button"
+        className="close collapse-button"
+        aria-label="Close"
+        onClick={onClick}
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    );
+  } else {
+    toggleButton = (
+      <button className="d-inline btn btn-primary" onClick={onClick}>
+        Expand
+      </button>
+    );
+  }
   return (
     <ErrorBoundary>
       <div className="col m-3 d-flex">
         <div className="card p-3 equation-card">
-          <h3>{title}</h3>
+          {toggleButton}
+          <h3 className="ml-3 d-inline">{title}</h3>
           <div>
             {cards}
             {equationRows}
