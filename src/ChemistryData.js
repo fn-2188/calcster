@@ -1157,3 +1157,296 @@ export function ActivitySeries() {
     </div>
   );
 }
+export function MolecularGeometry(){
+  return( <div>
+    <table className="table" >
+  
+    <thead><tr>
+    <th scope="col">Atoms bonded to <br />central atom
+    </th>
+    <th scope="col">Lone pairs
+    </th>
+    <th scope="col">Electron domains <br />(Steric number)
+    </th>
+    <th scope="col">Shape
+    </th>
+    <th scope="col">Ideal bond angle <br />(example's bond angle)
+    </th>
+    <th scope="col">Example
+    </th>
+    <th scope="col">Image
+    </th></tr></thead><tbody>
+    <tr>
+    <td>2
+    </td>
+    <td>0
+    </td>
+    <td>2
+    </td>
+    <td >linear
+    </td>
+    <td>180°
+    </td>
+    <td>CO<sub>2</sub>
+    </td>
+    <td><img alt="Linear-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/50px-Linear-3D-balls.png" decoding="async" width="50" height="23" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/75px-Linear-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/100px-Linear-3D-balls.png 2x" data-file-width="1100" data-file-height="508" />
+    </td></tr>
+    <tr>
+    <td>3
+    </td>
+    <td>0
+    </td>
+    <td>3
+    </td>
+    <td >trigonal planar
+    </td>
+    <td>120°
+    </td>
+    <td>BF<sub>3</sub>
+    </td>
+    <td><img alt="Trigonal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Trigonal-3D-balls.png/50px-Trigonal-3D-balls.png" decoding="async" width="50" height="44" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/31/Trigonal-3D-balls.png/75px-Trigonal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/31/Trigonal-3D-balls.png/100px-Trigonal-3D-balls.png 2x" data-file-width="1100" data-file-height="967" />
+    </td></tr>
+    <tr>
+    <td>2
+    </td>
+    <td>1
+    </td>
+    <td>3
+    </td>
+    <td >angular
+    </td>
+    <td>120° (119°)
+    </td>
+    <td>SO<sub>2</sub>
+    </td>
+    <td><img alt="Bent-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/50px-Bent-3D-balls.png" decoding="async" width="50" height="34" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/75px-Bent-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/100px-Bent-3D-balls.png 2x" data-file-width="1100" data-file-height="750" />
+    </td></tr>
+    <tr>
+    <td>4
+    </td>
+    <td>0
+    </td>
+    <td>4
+    </td>
+    <td >tetrahedral
+    </td>
+    <td>109.5°
+    </td>
+    <td>CH<sub>4</sub>
+    </td>
+    <td><img alt="AX4E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/AX4E0-3D-balls.png/50px-AX4E0-3D-balls.png" decoding="async" width="50" height="50" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/AX4E0-3D-balls.png/75px-AX4E0-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/f/f4/AX4E0-3D-balls.png/100px-AX4E0-3D-balls.png 2x" data-file-width="1092" data-file-height="1100" />
+    </td></tr>
+    <tr>
+    <td>3
+    </td>
+    <td>1
+    </td>
+    <td>4
+    </td>
+    <td >trigonal pyramidal
+    </td>
+    <td>109.5 (107.8°)
+    </td>
+    <td>NH<sub>3</sub>
+    </td>
+    <td><img alt="Pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramidal-3D-balls.png/50px-Pyramidal-3D-balls.png" decoding="async" width="50" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramidal-3D-balls.png/75px-Pyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pyramidal-3D-balls.png/100px-Pyramidal-3D-balls.png 2x" data-file-width="1100" data-file-height="878" />
+    </td></tr>
+    <tr>
+    <td>2
+    </td>
+    <td>2
+    </td>
+    <td>4
+    </td>
+    <td >angular
+    </td>
+    <td>109.5° (104.48°)
+    </td>
+    <td>H<sub>2</sub>O
+    </td>
+    <td><img alt="Bent-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/50px-Bent-3D-balls.png" decoding="async" width="50" height="34" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/75px-Bent-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bent-3D-balls.png/100px-Bent-3D-balls.png 2x" data-file-width="1100" data-file-height="750" />
+    </td></tr>
+    <tr>
+    <td>5
+    </td>
+    <td>0
+    </td>
+    <td>5
+    </td>
+    <td >trigonal bipyramidal
+    </td>
+    <td>90°, 120°
+    </td>
+    <td>PCl<sub>5</sub>
+    </td>
+    <td><img alt="Trigonal-bipyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Trigonal-bipyramidal-3D-balls.png/50px-Trigonal-bipyramidal-3D-balls.png" decoding="async" width="50" height="57" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Trigonal-bipyramidal-3D-balls.png/75px-Trigonal-bipyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Trigonal-bipyramidal-3D-balls.png/100px-Trigonal-bipyramidal-3D-balls.png 2x" data-file-width="968" data-file-height="1100" />
+    </td></tr>
+    <tr>
+    <td>4
+    </td>
+    <td>1
+    </td>
+    <td>5
+    </td>
+    <td >seesaw
+    </td>
+    <td>ax–ax 180° (173.1°), <br /> eq–eq 120° (101.6°), <br />ax–eq 90°
+    </td>
+    <td>SF<sub>4</sub>
+    </td>
+    <td><img alt="Seesaw-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Seesaw-3D-balls.png/50px-Seesaw-3D-balls.png" decoding="async" width="50" height="27" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Seesaw-3D-balls.png/75px-Seesaw-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Seesaw-3D-balls.png/100px-Seesaw-3D-balls.png 2x" data-file-width="1100" data-file-height="600" />
+    </td></tr>
+    <tr>
+    <td>3
+    </td>
+    <td>2
+    </td>
+    <td>5
+    </td>
+    <td >T-shaped
+    </td>
+    <td>90° (87.5°), 180° (175°)
+    </td>
+    <td>ClF<sub>3</sub>
+    </td>
+    <td><img alt="T-shaped-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/T-shaped-3D-balls.png/50px-T-shaped-3D-balls.png" decoding="async" width="50" height="37" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/T-shaped-3D-balls.png/75px-T-shaped-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b9/T-shaped-3D-balls.png/100px-T-shaped-3D-balls.png 2x" data-file-width="1100" data-file-height="805" />
+    </td></tr>
+    <tr>
+    <td>2
+    </td>
+    <td>3
+    </td>
+    <td>5
+    </td>
+    <td >linear
+    </td>
+    <td>180°
+    </td>
+    <td>XeF<sub>2</sub>
+    </td>
+    <td><img alt="Linear-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/50px-Linear-3D-balls.png" decoding="async" width="50" height="23" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/75px-Linear-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/7/78/Linear-3D-balls.png/100px-Linear-3D-balls.png 2x" data-file-width="1100" data-file-height="508" />
+    </td></tr>
+    <tr>
+    <td>6
+    </td>
+    <td>0
+    </td>
+    <td>6
+    </td>
+    <td >octahedral
+    </td>
+    <td>90°, 180°
+    </td>
+    <td>SF<sub>6</sub>
+    </td>
+    <td><img alt="AX6E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/AX6E0-3D-balls.png/50px-AX6E0-3D-balls.png" decoding="async" width="50" height="53" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/52/AX6E0-3D-balls.png/75px-AX6E0-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/52/AX6E0-3D-balls.png/100px-AX6E0-3D-balls.png 2x" data-file-width="1035" data-file-height="1100" />
+    </td></tr>
+    <tr>
+    <td>5
+    </td>
+    <td>1
+    </td>
+    <td>6
+    </td>
+    <td >square pyramidal
+    </td>
+    <td>90° (84.8°)
+    </td>
+    <td>BrF<sub>5</sub>
+    </td>
+    <td><img alt="Square-pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Square-pyramidal-3D-balls.png/50px-Square-pyramidal-3D-balls.png" decoding="async" width="50" height="41" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Square-pyramidal-3D-balls.png/75px-Square-pyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/a/af/Square-pyramidal-3D-balls.png/100px-Square-pyramidal-3D-balls.png 2x" data-file-width="1100" data-file-height="891" />
+    </td></tr>
+    <tr>
+    <td>4
+    </td>
+    <td>2
+    </td>
+    <td>6
+    </td>
+    <td >square planar
+    </td>
+    <td>90°, 180°
+    </td>
+    <td>XeF<sub>4</sub>
+    </td>
+    <td><img alt="Square-planar-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Square-planar-3D-balls.png/50px-Square-planar-3D-balls.png" decoding="async" width="50" height="36" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Square-planar-3D-balls.png/75px-Square-planar-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Square-planar-3D-balls.png/100px-Square-planar-3D-balls.png 2x" data-file-width="1100" data-file-height="796" />
+    </td></tr>
+    <tr>
+    <td>7
+    </td>
+    <td>0
+    </td>
+    <td>7
+    </td>
+    <td >pentagonal bipyramidal
+    </td>
+    <td>90°, 72°, 180°
+    </td>
+    <td>IF<sub>7</sub>
+    </td>
+    <td><img alt="Pentagonal-bipyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pentagonal-bipyramidal-3D-balls.png/50px-Pentagonal-bipyramidal-3D-balls.png" decoding="async" width="50" height="50" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pentagonal-bipyramidal-3D-balls.png/75px-Pentagonal-bipyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pentagonal-bipyramidal-3D-balls.png/100px-Pentagonal-bipyramidal-3D-balls.png 2x" data-file-width="1100" data-file-height="1096" />
+    </td></tr>
+    <tr>
+    <td>6
+    </td>
+    <td>1
+    </td>
+    <td>7
+    </td>
+    <td >pentagonal pyramidal
+    </td>
+    <td>72°, 90°, 144°
+    </td>
+    <td>XeOF<sub>5</sub><sup>−</sup>
+    </td>
+    <td><img alt="Pentagonal-pyramidal-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Pentagonal-pyramidal-3D-balls.png/50px-Pentagonal-pyramidal-3D-balls.png" decoding="async" width="50" height="37" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Pentagonal-pyramidal-3D-balls.png/75px-Pentagonal-pyramidal-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Pentagonal-pyramidal-3D-balls.png/100px-Pentagonal-pyramidal-3D-balls.png 2x" data-file-width="1100" data-file-height="816" />
+    </td></tr>
+    <tr>
+    <td>5
+    </td>
+    <td>2
+    </td>
+    <td>7
+    </td>
+    <td >pentagonal planar
+    </td>
+    <td>72°, 144°
+    </td>
+    <td>XeF<sub>5</sub><sup>−</sup>
+    </td>
+    <td><img alt="Pentagonal-planar-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pentagonal-planar-3D-balls.png/50px-Pentagonal-planar-3D-balls.png" decoding="async" width="50" height="31" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pentagonal-planar-3D-balls.png/75px-Pentagonal-planar-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Pentagonal-planar-3D-balls.png/100px-Pentagonal-planar-3D-balls.png 2x" data-file-width="2000" data-file-height="1229" />
+    </td></tr>
+    <tr>
+    <td>8
+    </td>
+    <td>0
+    </td>
+    <td>8
+    </td>
+    <td >square antiprismatic
+    </td>
+    <td>
+    </td>
+    <td>XeF<sub>8</sub><sup>2−</sup>
+    </td>
+    <td><img alt="Square-antiprismatic-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Square-antiprismatic-3D-balls.png/50px-Square-antiprismatic-3D-balls.png" decoding="async" width="50" height="44" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Square-antiprismatic-3D-balls.png/75px-Square-antiprismatic-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Square-antiprismatic-3D-balls.png/100px-Square-antiprismatic-3D-balls.png 2x" data-file-width="2000" data-file-height="1769" />
+    </td></tr>
+    <tr>
+    <td>9
+    </td>
+    <td>0
+    </td>
+    <td>9
+    </td>
+    <td >tricapped trigonal prismatic
+    </td>
+    <td>
+    </td>
+    <td>ReH<sub>9</sub><sup>2−</sup>
+    </td>
+    <td><img alt="AX9E0-3D-balls.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/AX9E0-3D-balls.png/50px-AX9E0-3D-balls.png" decoding="async" width="50" height="54" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4d/AX9E0-3D-balls.png/75px-AX9E0-3D-balls.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4d/AX9E0-3D-balls.png/100px-AX9E0-3D-balls.png 2x" data-file-width="1865" data-file-height="2000" />
+    </td></tr></tbody><tfoot></tfoot></table>
+    From{" "}
+      <a href="https://en.wikipedia.org/wiki/Molecular_geometry">Wikipedia</a>
+  </div>);
+}

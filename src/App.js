@@ -3,7 +3,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "mathjs";
 import React, { useState } from "react";
 import { evaluateFunction } from "./Math";
-import { ActivitySeries, SolubilityTable } from "./ChemistryData";
+import {
+  MolecularGeometry,
+  ActivitySeries,
+  SolubilityTable,
+} from "./ChemistryData";
 var Latex = require("react-latex");
 const arrow = <span>&rarr;</span>;
 class ErrorBoundary extends React.Component {
@@ -419,6 +423,11 @@ function App(props) {
               <EquationCard
                 title="Activity Series"
                 cards={[<ActivitySeries />]}
+              />
+              <EquationCard
+                title="Molecular Geometry"
+                cards={[<MolecularGeometry />]}
+                xl={true}
               />
             </ErrorBoundary>
           </div>
