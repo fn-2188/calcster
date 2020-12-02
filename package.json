@@ -2,7 +2,7 @@
   "name": "calcster",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fn-2188.github.io/calcster/",
+  "homepage": "http://fn-2188.github.io/calcster/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
