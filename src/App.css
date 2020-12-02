@@ -1,0 +1,38 @@
+.flex-container{
+  /* display: flex; */
+  padding-bottom: 20em;
+}
+#console_input{
+  height: 4em;
+}
+#preview{
+  text-align: center;
+  min-height: 24px;
+}
+#equations{
+  width: 100%;
+}
+h1, h2, p{
+  text-align: center;
+}
+.var-text{
+  font-size: 14px;
+  width: 5em;
+}
+th, td{
+  padding: 1em;
+  text-align: center;
+  border: 1px solid black;
+}
+body{
+  font-family: "Encode Sans", sans-serif;
+}
+.equation-card {
+  text-align: center;
+}
+.equation{
+  white-space: nowrap;
+}
+.equation, .equation-data{
+  margin: 0.5em;
+}
