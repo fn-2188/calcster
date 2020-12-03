@@ -1,5 +1,9 @@
 import { format, evaluate } from "mathjs";
 
+export function formatResult(res) {
+  return format(res, { precision: 13 });
+}
+
 export function evaluateFunction(expr, mutable, vars) {
   let varsToAdd = [];
   let modified_expr = expr;
@@ -36,7 +40,7 @@ export function evaluateFunction(expr, mutable, vars) {
     });
     return {
       err: false,
-      result: format(result, {precision:14}),
+      result: result,
       input: expr,
       evaluatedExpression: modified_expr,
       newVars: newVars,

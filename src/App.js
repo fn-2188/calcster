@@ -1,6 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "mathjs";
+import {format} from "mathjs";
 import React, { useState } from "react";
 import { evaluateFunction } from "./Math";
 import {
@@ -44,6 +44,11 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+
+function formatResult(res){
+  return format(res, {precision:13});
+}
+
 function VariableEntry(props) {
   let { name, value, mutable } = props;
   return (
@@ -178,7 +183,7 @@ function Calculator(props) {
             setVars({ ...vars, ...newVars });
           }
           setEquations([
-            { input: res.input, result: res.result, success: !res.err },
+            { input: res.input, result: formatResult(res.result), success: !res.err },
             ...equations,
           ]);
           setInputValue("");
@@ -193,7 +198,7 @@ function Calculator(props) {
   if (inputValue.length > 0) {
     let res = evaluateFunction(inputValue, true, vars);
     if (!res.err) {
-      previewResult = res.result;
+      previewResult = formatResult(res.result);
     }
   }
   const handleChange = (event) => {
