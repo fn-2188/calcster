@@ -1,8 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {format} from "mathjs";
 import React, { useState } from "react";
-import { evaluateFunction } from "./Math";
+import { formatResult, evaluateFunction } from "./Math";
 import {
   MolecularGeometry,
   ActivitySeries,
@@ -43,10 +42,6 @@ class ErrorBoundary extends React.Component {
     // Normally, just render children
     return this.props.children;
   }
-}
-
-function formatResult(res){
-  return format(res, {precision:13});
 }
 
 function VariableEntry(props) {
@@ -167,6 +162,7 @@ function Calculator(props) {
       setInputValue(newIndex >= 0 ? equations[newIndex].input : typedEquation);
     } else {
       let expr = event.target.value;
+      setActiveIndex(-1);
       if (event.key === "Enter") {
         let res = evaluateFunction(expr, true, vars);
         if (expr.replace(" ", "").length > 0) {
@@ -183,13 +179,16 @@ function Calculator(props) {
             setVars({ ...vars, ...newVars });
           }
           setEquations([
-            { input: res.input, result: formatResult(res.result), success: !res.err },
+            {
+              input: res.input,
+              result: formatResult(res.result),
+              success: !res.err,
+            },
             ...equations,
           ]);
           setInputValue("");
         }
       } else {
-        setActiveIndex(-1);
         setTypedEquation(expr);
       }
     }
