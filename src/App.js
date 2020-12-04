@@ -494,6 +494,11 @@ function App(props) {
                   },
                   {
                     value:
+                      "$$\\text{Integrated rate law}=ln\\frac{[A]}{[A]_{0}}=-kt$$",
+                    isEquation: true,
+                  },
+                  {
+                    value:
                       "$$\\text{Rate of reaction}=-\\frac{1}{a}\\frac{d[A]}{dt}=-\\frac{1}{b}\\frac{d[B]}{dt}=\\frac{1}{c}\\frac{d[C]}{dt}=\\frac{1}{d}\\frac{d[D]}{dt}$$",
                     isEquation: true,
                   },
