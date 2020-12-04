@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/calcster/static/css/main.bbe47282.chunk.css",
-    "main.js": "/calcster/static/js/main.b298d0fe.chunk.js",
-    "main.js.map": "/calcster/static/js/main.b298d0fe.chunk.js.map",
+    "main.js": "/calcster/static/js/main.f3eb9470.chunk.js",
+    "main.js.map": "/calcster/static/js/main.f3eb9470.chunk.js.map",
     "runtime-main.js": "/calcster/static/js/runtime-main.bf28d126.js",
     "runtime-main.js.map": "/calcster/static/js/runtime-main.bf28d126.js.map",
     "static/css/2.1a02f21c.chunk.css": "/calcster/static/css/2.1a02f21c.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.1a02f21c.chunk.css",
     "static/js/2.85b3e4ab.chunk.js",
     "static/css/main.bbe47282.chunk.css",
-    "static/js/main.b298d0fe.chunk.js"
+    "static/js/main.f3eb9470.chunk.js"
   ]
 }
