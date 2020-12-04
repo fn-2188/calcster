@@ -1,4 +1,4 @@
-import 'react-app-polyfill/ie9';
+import "react-app-polyfill/ie9";
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -11,18 +11,16 @@ let vars = {
   h: { value: evaluate("(6.626e-34 m^2 kg/s)"), mutable: false },
   Ry: { value: evaluate("2.178e-18 J"), mutable: false },
   me: { value: evaluate("electronMass"), mutable: false },
-  amH: { value: evaluate("1.00794 g/mol"), mutable: false },
-  amC: { value: evaluate("12.0107 g/mol"), mutable: false },
-  amO: { value: evaluate("15.9994 g/mol"), mutable: false },
-  amN: { value: evaluate("14.0067 g/mol"), mutable: false },
-  amCl: { value: evaluate("35.4527 g/mol"), mutable: false },
 };
-
-for (let element in periodicTableData) {
-  if ("atomicMass" in element) {
-    vars[`am${element.symbol}`] = { value: evaluate(`${element.atomicMass} g/mol`), mutable:false }
+periodicTableData.forEach((element) => {
+  if (element.hasOwnProperty("atomicMass")) {
+    vars[`am${element.symbol}`] = {
+      value: evaluate(`${element.atomicMass} g/mol`),
+      mutable: false,
+      hide: true,
+    };
   }
-}
+});
 
 createUnit("cal", "4.184 J");
 createUnit("kcal", "1000 cal");

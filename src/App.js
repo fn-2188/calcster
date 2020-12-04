@@ -145,14 +145,16 @@ function Calculator(props) {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [vars, setVars] = useState(props.variables);
   const [inputValue, setInputValue] = useState("");
-  let varEntries = Object.keys(vars).map((key, i) => (
-    <VariableEntry
-      key={i}
-      name={key}
-      value={vars[key].value}
-      mutable={vars[key].mutable}
-    />
-  ));
+  let varEntries = Object.keys(vars)
+    .filter((v) => !vars[v].hide)
+    .map((key, i) => (
+      <VariableEntry
+        key={i}
+        name={key}
+        value={vars[key].value}
+        mutable={vars[key].mutable}
+      />
+    ));
   const handleInputEvent = (event) => {
     if (event.key === "ArrowUp") {
       let newIndex = Math.max(activeIndex - 1, -1);
@@ -499,7 +501,7 @@ function App(props) {
               />
               <EquationCard
                 title="Electrolytes"
-                cards={[<Electrolytes key="el"/>]}
+                cards={[<Electrolytes key="el" />]}
                 xl={true}
               />
             </ErrorBoundary>
