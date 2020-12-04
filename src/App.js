@@ -6,6 +6,8 @@ import {
   MolecularGeometry,
   ActivitySeries,
   SolubilityTable,
+  FormalChargeExample,
+  Electrolytes,
 } from "./ChemistryData";
 var Latex = require("react-latex");
 const arrow = <span>&rarr;</span>;
@@ -379,6 +381,22 @@ function App(props) {
                     value: "$$\\text{1 debye (D)}=3.336*10^{-30} C m$$",
                     isEquation: true,
                   },
+                  {
+                    value:
+                      "$$\\text{\\% ionic character}=\\frac{\\text{measured dipole moment}}{\\text{expected dipole moment}}$$",
+                    isEquation: true,
+                  },
+                ]}
+              />
+              <EquationCard
+                title="Formal Charge"
+                cards={[<FormalChargeExample />]}
+                equations={[
+                  {
+                    value:
+                      "$$\\sum (\\text{formal charges}) = \\text{overall charge}$$",
+                    isEquation: true,
+                  },
                 ]}
               />
               <EquationCard
@@ -400,6 +418,7 @@ function App(props) {
                     isEquation: true,
                   },
                 ]}
+                xl={true}
               />
               <EquationCard
                 title="Molar Mass"
@@ -438,7 +457,14 @@ function App(props) {
                 cards={[<ActivitySeries key="as" />]}
               />
               <EquationCard
-                title="Molecular Geometry"
+                title="VSEPR/Molecular Geometry"
+                equations={[
+                  {
+                    value:
+                      "A = central atom, X = attached atoms, E = lone pairs on central atom",
+                    isEquation: true,
+                  },
+                ]}
                 cards={[<MolecularGeometry key="mg" />]}
                 xl={true}
               />
@@ -470,6 +496,11 @@ function App(props) {
                     isEquation: true,
                   },
                 ]}
+              />
+              <EquationCard
+                title="Electrolytes"
+                cards={[<Electrolytes key="el"/>]}
+                xl={true}
               />
             </ErrorBoundary>
           </div>
