@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/calcster/static/css/main.db035bd7.chunk.css",
-    "main.js": "/calcster/static/js/main.82956b50.chunk.js",
-    "main.js.map": "/calcster/static/js/main.82956b50.chunk.js.map",
+    "main.css": "/calcster/static/css/main.bbe47282.chunk.css",
+    "main.js": "/calcster/static/js/main.52a3589e.chunk.js",
+    "main.js.map": "/calcster/static/js/main.52a3589e.chunk.js.map",
     "runtime-main.js": "/calcster/static/js/runtime-main.bf28d126.js",
     "runtime-main.js.map": "/calcster/static/js/runtime-main.bf28d126.js.map",
     "static/css/2.1a02f21c.chunk.css": "/calcster/static/css/2.1a02f21c.chunk.css",
@@ -12,14 +12,15 @@
     "static/js/3.c78ec9eb.chunk.js.map": "/calcster/static/js/3.c78ec9eb.chunk.js.map",
     "index.html": "/calcster/index.html",
     "static/css/2.1a02f21c.chunk.css.map": "/calcster/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.db035bd7.chunk.css.map": "/calcster/static/css/main.db035bd7.chunk.css.map",
-    "static/js/2.85b3e4ab.chunk.js.LICENSE.txt": "/calcster/static/js/2.85b3e4ab.chunk.js.LICENSE.txt"
+    "static/css/main.bbe47282.chunk.css.map": "/calcster/static/css/main.bbe47282.chunk.css.map",
+    "static/js/2.85b3e4ab.chunk.js.LICENSE.txt": "/calcster/static/js/2.85b3e4ab.chunk.js.LICENSE.txt",
+    "static/media/formal-charge.573d66c5.png": "/calcster/static/media/formal-charge.573d66c5.png"
   },
   "entrypoints": [
     "static/js/runtime-main.bf28d126.js",
     "static/css/2.1a02f21c.chunk.css",
     "static/js/2.85b3e4ab.chunk.js",
-    "static/css/main.db035bd7.chunk.css",
-    "static/js/main.82956b50.chunk.js"
+    "static/css/main.bbe47282.chunk.css",
+    "static/js/main.52a3589e.chunk.js"
   ]
 }
