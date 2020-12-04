@@ -4,8 +4,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createUnit, evaluate} from "mathjs";
-
+import { createUnit, evaluate } from "mathjs";
+import { periodicTableData } from "./PeriodicTableData";
 let vars = {
   c: { value: evaluate("3e8 m/s"), mutable: false },
   h: { value: evaluate("(6.626e-34 m^2 kg/s)"), mutable: false },
@@ -17,6 +17,12 @@ let vars = {
   amN: { value: evaluate("14.0067 g/mol"), mutable: false },
   amCl: { value: evaluate("35.4527 g/mol"), mutable: false },
 };
+
+for (let element in periodicTableData) {
+  if ("atomicMass" in element) {
+    vars[`am${element.symbol}`] = { value: evaluate(`${element.atomicMass} g/mol`), mutable:false }
+  }
+}
 
 createUnit("cal", "4.184 J");
 createUnit("kcal", "1000 cal");
