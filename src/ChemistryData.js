@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import formalCharge from "./img/formal-charge.png";
-
+import hybridizationShape from "./img/hybridization-molecular-shape.png";
+import molecularShape from "./img/molecular-orbital.png";
+import molecularShape2 from "./img/mo-2.PNG";
+import ligands from "./img/ligands.png";
+import complexes from "./img/complexes.png";
+import colors from "./img/colors.PNG";
+import series from "./img/series.PNG";
+import nuclearDecay from "./img/nuclear-decay.PNG";
+import packingStructures from "./img/packing-structures.PNG";
+import fcc from "./img/fcc.PNG";
+import bcc from "./img/bcc.PNG";
 const originalTable = (
   <table>
     <thead>
@@ -390,7 +400,6 @@ const originalTable = (
     </tbody>
   </table>
 );
-
 export function SolubilityTable() {
   const [expand, setExpand] = useState(false);
   const onClick = () => {
@@ -1585,6 +1594,112 @@ export function FormalChargeExample() {
         className="equation-image"
         alt="Formal charge examples"
         src={formalCharge}
+      />
+    </div>
+  );
+}
+export function HybridizationMolecularShape() {
+  return (
+    <div>
+      <img
+        className="equation-image"
+        alt="Hybridization molecular shape"
+        src={hybridizationShape}
+      />
+    </div>
+  );
+}
+export function NuclearDecay() {
+  return (
+    <div>
+      <img
+        className="equation-image"
+        alt="Nuclear decay"
+        src={nuclearDecay}
+      />
+    </div>
+  );
+}
+
+export function MOEnergyLevel() {
+  return (
+    <div>
+      <img
+        className="equation-image"
+        alt="Molecular orbital energy levels"
+        src={molecularShape}
+      />
+      <img
+        className="equation-image"
+        alt="Molecular orbital energy levels"
+        src={molecularShape2}
+      />
+    </div>
+  );
+}
+export function Ligands() {
+  return (
+    <div>
+      <img
+        className="equation-image"
+        alt="Ligands"
+        src={ligands}
+      />
+    </div>
+  );
+}
+export function PackingStructures() {
+  return (
+    <div>
+      <img
+        className="equation-image"
+        alt="Packing structures"
+        src={packingStructures}
+      />
+      <h2>BCC</h2>
+      <img
+        className="equation-image"
+        alt="BCC"
+        src={bcc}
+      />
+      <h2>FCC</h2>
+      <img
+        className="equation-image"
+        alt="FCC"
+        src={fcc}
+      />
+    </div>
+  );
+}
+export function Complexes() {
+  return (
+    <div>
+      <img
+        className="equation-image"
+        alt="Complexes"
+        src={complexes}
+      />
+    </div>
+  );
+}
+export function Colors() {
+  return (
+    <div>
+      <img
+        className="equation-image"
+        alt="Colors"
+        src={colors}
+      />
+    </div>
+  );
+}
+export function Series() {
+  return (
+    <div>
+      <img
+        className="equation-image"
+        alt="Series"
+        src={series}
       />
     </div>
   );

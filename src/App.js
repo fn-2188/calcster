@@ -8,7 +8,16 @@ import {
   SolubilityTable,
   FormalChargeExample,
   Electrolytes,
+  MOEnergyLevel,
+  HybridizationMolecularShape,
+  Complexes,
+  Ligands,
+  Colors,
+  Series,
+  NuclearDecay,
+  PackingStructures
 } from "./ChemistryData";
+import { RateLawSummary } from "./ReactionRates";
 var Latex = require("react-latex");
 const arrow = <span>&rarr;</span>;
 class ErrorBoundary extends React.Component {
@@ -459,6 +468,29 @@ function App(props) {
                 cards={[<ActivitySeries key="as" />]}
               />
               <EquationCard
+                title="Electrolytes"
+                cards={[<Electrolytes key="el" />]}
+                xl={true}
+              />
+              <EquationCard
+                title="Reaction Rate"
+                cards={[<RateLawSummary key="rls" />]}
+                xl={true}
+              />
+              <EquationCard
+                title="Ideal Gas Laws"
+                equations={[
+                  {
+                    value: "$$PV=nRT$$",
+                    isEquation: true,
+                  },
+                  {
+                    value: "$$P_{tot}=P_{1}+P_{2}$$",
+                    isEquation: true,
+                  },
+                ]}
+              />
+              <EquationCard
                 title="VSEPR/Molecular Geometry"
                 equations={[
                   {
@@ -471,43 +503,42 @@ function App(props) {
                 xl={true}
               />
               <EquationCard
-                title="Reaction Rate"
+                title="Molecular Orbital Theory"
+                cards={[<MOEnergyLevel />, <HybridizationMolecularShape />]}
+              />
+              <EquationCard
+                title="Coordination Compounds"
+                cards={[<Ligands />, <Complexes />, <Colors />, <Series />]}
+                xl={true}
+              />
+              <EquationCard
+                title="Vapor Pressure/Raoult's Law"
                 equations={[
                   {
                     value:
-                      "Under conditions where reverse reaction can be neglected",
-                    isEquation: false,
-                  },
-                  {
-                    value:
-                      "$$\\text{Avg Rate}=|\\frac{\\Delta[A]}{\\Delta t}|$$",
-                    isEquation: true,
-                  },
-                  {
-                    value: "A is specific reactant or product",
-                    isEquation: false,
-                  },
-                  {
-                    value:
-                      "$$\\text{Differential rate law}=k[Reactant]^{x}[Reactant]^{y}$$",
+                      "$$P_{solution}=X_{solvent} * P_{solvent}^{0}$$",
                     isEquation: true,
                   },
                   {
                     value:
-                      "$$\\text{Integrated rate law}=ln\\frac{[A]}{[A]_{0}}=-kt$$",
+                      "$$P_{solution}=P_{A}+P_{B}=X_{A} * P_{A}^{0}+X_{B} * P_{B}^{0}$$",
                     isEquation: true,
                   },
                   {
                     value:
-                      "$$\\text{Rate of reaction}=-\\frac{1}{a}\\frac{d[A]}{dt}=-\\frac{1}{b}\\frac{d[B]}{dt}=\\frac{1}{c}\\frac{d[C]}{dt}=\\frac{1}{d}\\frac{d[D]}{dt}$$",
+                      "$$X_{A}=\\frac{n_{A}}{n_{A} * n_{B}}$$",
                     isEquation: true,
                   },
                 ]}
               />
               <EquationCard
-                title="Electrolytes"
-                cards={[<Electrolytes key="el" />]}
+                title="Nuclear Decay"
+                cards={[<NuclearDecay />]}
                 xl={true}
+              />
+                            <EquationCard
+                title="Packing Structures"
+                cards={[<PackingStructures />]}
               />
             </ErrorBoundary>
           </div>

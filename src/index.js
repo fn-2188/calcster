@@ -6,11 +6,25 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createUnit, evaluate } from "mathjs";
 import { periodicTableData } from "./PeriodicTableData";
+
+createUnit("cal", "4.184 J");
+createUnit("kcal", "1000 cal");
+createUnit("D", "3.336e-30 C*m");
+createUnit("M", "1 mol/L");
+createUnit("mu", "1.6605e-27 kg");
+
 let vars = {
   c: { value: evaluate("3e8 m/s"), mutable: false },
+  uO: { value: evaluate("pi* 4*10^-7 T m/A"), mutable: false },
   h: { value: evaluate("(6.626e-34 m^2 kg/s)"), mutable: false },
   Ry: { value: evaluate("2.178e-18 J"), mutable: false },
   me: { value: evaluate("electronMass"), mutable: false },
+  mp: { value: evaluate("1.0078 mu"), mutable: false },
+  mn: { value: evaluate("1.0087 mu"), mutable: false },
+  gc: {
+    value: evaluate("gc=gasConstant to atm L mol^-1 K^-1"),
+    mutable: false,
+  },
 };
 periodicTableData.forEach((element) => {
   if (element.hasOwnProperty("atomicMass")) {
@@ -22,10 +36,7 @@ periodicTableData.forEach((element) => {
   }
 });
 
-createUnit("cal", "4.184 J");
-createUnit("kcal", "1000 cal");
-createUnit("D", "3.336e-30 C*m");
-createUnit("M", "1 mol/L");
+
 
 ReactDOM.render(
   <React.StrictMode>
